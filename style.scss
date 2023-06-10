@@ -1,0 +1,70 @@
+@import'layout';
+
+body{
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond{background-image: url(images/pattern-background-mobile.svg);}
+}
+main{
+    background-color: #fff;
+    box-shadow: 0 .7rem 2rem hsla(224, 23%, 55%, .5);
+
+    .heading{
+        color: hsl(223, 47%, 23%);
+        font-weight: 700;
+    }
+
+    .paragraph{
+        color: hsl(224, 23%, 55%);
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    
+    .plan-box{
+        background-color: hsl(225, 100%, 98%);
+        
+        .price-box{
+            .text{
+                color: hsl(223, 47%, 23%); 
+                @include respond{font-size: 1.2rem;}
+            }
+            .price{color: hsl(224, 23%, 55%); font-weight: 500;}
+        }
+
+        .change{
+            font-size: 1.2rem;
+            &:hover{
+                text-decoration: none;
+                color: darken(hsl(245, 75%, 52%), 15%);
+            }
+        }
+        
+    }
+    .payment{
+        background-color: hsl(245, 75%, 52%);
+        text-decoration: none;
+        color: #fff;
+        font-weight: 900;
+        font-size: 1.2rem;
+        transition: all .2s;
+
+        &:hover{
+            transform: translateY(-3px);
+            background-color: darken(hsl(245, 75%, 52%), 15%);
+            box-shadow: 0 .5rem 1rem hsla(224, 23%, 55%, .5);
+            
+        }
+    }
+    .cancel{
+        color: hsl(224, 23%, 55%);
+        font-weight: 900;
+        font-size: 1.2rem;
+        text-decoration: none;
+
+        &:hover{
+            color: hsl(223, 47%, 23%);
+        }
+    }
+}

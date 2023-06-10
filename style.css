@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto;
+  width: 45rem;
+  margin: 8rem auto;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+@media (max-width: 450px) {
+  main {
+    width: 35rem;
+  }
+}
+main > *:not(:first-child) {
+  grid-column: 2/3;
+  margin: 1.5rem;
+}
+main .heading {
+  margin-top: 3rem;
+  grid-row: 2/3;
+  justify-self: center;
+}
+main .paragraph {
+  margin-top: 0;
+  grid-row: 3/4;
+  text-align: center;
+}
+main .plan-box {
+  border-radius: 0.8rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  grid-row: 4/5;
+  display: grid;
+  grid: auto/9rem auto;
+  align-items: center;
+}
+main .plan-box img {
+  margin-left: 1.5rem;
+}
+main .plan-box .price-box {
+  grid-column: 2/3;
+}
+main .plan-box .change {
+  grid-column: 3/4;
+}
+main .plan-box .price-box {
+  margin-left: -10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .payment {
+  grid-row: 5/6;
+  height: 3.5rem;
+  width: 25rem;
+  border-radius: 0.8rem;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .cancel {
+  grid-row: 6/7;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+body {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 450px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+}
+
+main {
+  background-color: #fff;
+  box-shadow: 0 0.7rem 2rem hsla(224, 23%, 55%, 0.5);
+}
+main .heading {
+  color: hsl(223, 47%, 23%);
+  font-weight: 700;
+}
+main .paragraph {
+  color: hsl(224, 23%, 55%);
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+main .plan-box {
+  background-color: hsl(225, 100%, 98%);
+}
+main .plan-box .price-box .text {
+  color: hsl(223, 47%, 23%);
+}
+@media (max-width: 450px) {
+  main .plan-box .price-box .text {
+    font-size: 1.2rem;
+  }
+}
+main .plan-box .price-box .price {
+  color: hsl(224, 23%, 55%);
+  font-weight: 500;
+}
+main .plan-box .change {
+  font-size: 1.2rem;
+}
+main .plan-box .change:hover {
+  text-decoration: none;
+  color: #2318a5;
+}
+main .payment {
+  background-color: hsl(245, 75%, 52%);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+main .payment:hover {
+  transform: translateY(-3px);
+  background-color: #2318a5;
+  box-shadow: 0 0.5rem 1rem hsla(224, 23%, 55%, 0.5);
+}
+main .cancel {
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+main .cancel:hover {
+  color: hsl(223, 47%, 23%);
+}/*# sourceMappingURL=style.css.map */
